@@ -67,7 +67,7 @@ class GulpRevVersionStrategy implements VersionStrategyInterface
         $hasVersion = isset($this->paths[$path]);
 
         if (!$fileExists && !$hasVersion) {
-            throw new Exception(sprintf('The file "%s" does not exist and there is no version file for it', $path));
+            // throw new Exception(sprintf('The file "%s" does not exist and there is no version file for it', $path));
         }
 
         return $hasVersion ? $this->paths[$path] : $path;
